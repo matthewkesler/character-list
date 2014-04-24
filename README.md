@@ -1,4 +1,4 @@
-character-list
+Marvel Character List
 ==============
 
 Angular.js Workshop Example App
