@@ -1,14 +1,13 @@
 .container {
-  max-width: 940px;
+  width: 748px;
   margin: auto;
 }
 .main {
   min-height: 500px;
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 767px) {
   .container {
     width: 100%;
-    padding: 0 20px;
   }
 }
 header {
@@ -26,7 +25,7 @@ header .logo {
   margin-right: 10px;
   float: left;
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 767px) {
   header {
     font-size: 18px;
     line-height: 85px;
@@ -57,25 +56,32 @@ h1 {
   text-transform: uppercase;
 }
 a {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   text-decoration: none;
   color: #fff;
 }
 a:hover {
   color: #f30b0a;
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 767px) {
   h1 {
+    padding-left: 10px;
     font-size: 24px;
   }
 }
 .character-list {
-  width: 75%;
+  width: 60%;
   margin: auto;
   border: none;
   border-spacing: 0;
+  margin-bottom: 50px;
 }
 .character-list tr:hover a {
   color: #f30b0a;
+}
+.character-list tr:hover td:before {
+  width: 115%;
 }
 .character-list td {
   position: relative;
@@ -87,33 +93,36 @@ a:hover {
   display: inline-block;
   width: 100%;
   height: 100%;
-  line-height: 100px;
+  line-height: 45px;
 }
 .character-list td:first-child {
-  width: 150px;
+  width: 110px;
 }
 .character-list td:first-child a {
   line-height: 0;
 }
 .character-list td:first-child img {
-  border-radius: 50px;
-  margin-left: 11px;
+  border-radius: 5px;
+  margin-left: 25px;
 }
 .character-list td:before {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   content: "";
   background: #000;
   position: absolute;
   top: 0;
-  height: 95%;
+  height: 92%;
   width: 101%;
   z-index: -1;
   -webkit-transform: skew(-11deg, 0deg);
   -ms-transform: skew(-11deg, 0deg);
   transform: skew(-11deg, 0deg);
 }
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 767px) {
   .character-list {
     width: 100%;
+    border-spacing: 0 5px;
   }
   .character-list td {
     background-color: black;
@@ -122,4 +131,17 @@ a:hover {
   .character-list td:before {
     display: none;
   }
+}
+.character-detail {
+  padding: 10px 0;
+}
+.character-detail a {
+  color: #111;
+}
+.character-detail h1 {
+  margin: 0;
+}
+.character-detail img {
+  float: left;
+  margin: 10px 20px 0 0;
 }

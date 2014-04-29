@@ -1,7 +1,7 @@
 <h1>Choose A Character</h1>
-<table>
-  <tr>
-    <td>Img</td>
-    <td>Name</td>
+<table class="character-list">
+  <tr ng-repeat="character in characters">
+    <td><a href="/#/characters/{{character.id}}"><img ng-src="{{character.thumbnail.path}}/standard_small.jpg"/></a></td>
+    <td><a href="/#/characters/{{character.id}}">{{character.name}}</a></td>
   </tr>
 </table>
