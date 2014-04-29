@@ -1,9 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Oswald', Helvetica, sans-serif;
-  font-size: 16px;
-  color: #111;
+.container {
+  max-width: 940px;
+  margin: auto;
+}
+.main {
+  min-height: 500px;
+}
+@media only screen and (max-width: 959px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 header {
   color: #fff;
@@ -20,6 +26,12 @@ header .logo {
   margin-right: 10px;
   float: left;
 }
+@media only screen and (max-width: 959px) {
+  header {
+    font-size: 18px;
+    line-height: 85px;
+  }
+}
 footer {
   background-color: #222;
   color: #929292;
@@ -28,36 +40,86 @@ footer {
   line-height: 50px;
   text-align: center;
 }
-.container {
-  max-width: 940px;
-  margin: auto;
+footer a {
+  color: #929292;
+}
+footer a:hover {
+  color: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 16px;
+  color: #111;
 }
 h1 {
   text-transform: uppercase;
 }
 a {
   text-decoration: none;
-  color: #929292;
-}
-a:hover {
   color: #fff;
 }
-.main {
-  min-height: 500px;
-}
-.main .inner {
-  background-color: red;
+a:hover {
+  color: #f30b0a;
 }
 @media only screen and (max-width: 959px) {
-  header {
-    font-size: 18px;
-    line-height: 85px;
-  }
-  .container {
-    width: 100%;
-    padding: 0 20px;
-  }
   h1 {
     font-size: 24px;
+  }
+}
+.character-list {
+  width: 75%;
+  margin: auto;
+  border: none;
+  border-spacing: 0;
+}
+.character-list tr:hover a {
+  color: #f30b0a;
+}
+.character-list td {
+  position: relative;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 20px;
+}
+.character-list td a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+}
+.character-list td:first-child {
+  width: 150px;
+}
+.character-list td:first-child a {
+  line-height: 0;
+}
+.character-list td:first-child img {
+  border-radius: 50px;
+  margin-left: 11px;
+}
+.character-list td:before {
+  content: "";
+  background: #000;
+  position: absolute;
+  top: 0;
+  height: 95%;
+  width: 101%;
+  z-index: -1;
+  -webkit-transform: skew(-11deg, 0deg);
+  -ms-transform: skew(-11deg, 0deg);
+  transform: skew(-11deg, 0deg);
+}
+@media only screen and (max-width: 959px) {
+  .character-list {
+    width: 100%;
+  }
+  .character-list td {
+    background-color: black;
+    margin-bottom: 10px;
+  }
+  .character-list td:before {
+    display: none;
   }
 }

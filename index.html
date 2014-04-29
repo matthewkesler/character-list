@@ -4,15 +4,22 @@
   <title>Marvel Character List</title>
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body ng-app="CharacterList">
+<body ng-app="CharacterList" ng-controller="charactersController">
   <header>
     <div class="container">
-      <div class="logo"></div>Character List
+      <div class="logo"></div>
+      Character List
     </div>
   </header>
 
   <div class="main container">
     <h1>Choose A Character</h1>
+    <table class="character-list">
+      <tr ng-repeat="character in characters">
+        <td><a href><img ng-src="{{character.thumbnail.path}}/standard_medium.jpg"/></a></td>
+        <td><a href>{{character.name}}</a></td>
+      </tr>
+    </table>
   </div>
 
   <footer>
@@ -21,6 +28,8 @@
   <script type="text/javascript" src="lib/angular.js"></script>
   <script type="text/javascript" src="lib/underscore.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/CharactersController.js"></script>
+
 
 </body>
 </html>
