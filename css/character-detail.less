@@ -3,12 +3,33 @@
     
     a {
         color: #111;
+        &:hover {
+            color: #f30b0a;
+        }
     }
     h1 {
         margin: 0;
     }
+    h2 {
+        margin:0;
+    }
     img {
         float: left;
         margin: 10px 20px 0 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .character-detail {
+        padding: 10px 10px;
+
+        h1 {
+            padding: 0;
+        }
+
+        img {
+            width: 150px;
+            float: none;
+        }
     }
 }
