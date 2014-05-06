@@ -7,8 +7,8 @@
         <h1>{{character.name}}</h1>
         {{character.description}} <br/><br/>
         <strong>Comics:</strong> {{character.comics.available | number}} <br/>
-        <strong>Series:</strong> {{character.series.available}} <br/>
-        <strong>Stories:</strong> {{character.stories.available}} <br/>
+        <strong>Series:</strong> {{character.series.available | number}} <br/>
+        <strong>Stories:</strong> {{character.stories.available | number}} <br/>
         <br/>
         <a href="{{character.urls[0].url}}">Comics List</a><br/>
         <a href="{{character.urls[1].url}}">Character Wiki</a>
