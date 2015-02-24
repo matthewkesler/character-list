@@ -1,0 +1,10 @@
+{
+	"name": "marvel-character-list",
+	"description": "Example Angular App",
+	"version": "1.1.0",
+	"dependencies": {},
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-connect": "2.0.6"
+	}
+}
