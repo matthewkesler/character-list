@@ -147,6 +147,9 @@ a:hover {
   float: left;
   margin: 10px 20px 0 0;
 }
+.character-detail .refresh {
+  float: right;
+}
 @media only screen and (max-width: 767px) {
   .character-detail {
     padding: 10px 10px;
